@@ -562,7 +562,6 @@ let categorias = ['',
 
             let producto = jsonListaCompletaProductos[indice];
             document.getElementById('descripcionProducto').innerHTML = producto.descripcionCorta;
-            document.getElementById('imagenProd').src = producto.urlImagen;
             document.getElementById('descripcionLargaModal').innerHTML = producto.descripcionLarga;
             if (producto.tabla != undefined)
             {
