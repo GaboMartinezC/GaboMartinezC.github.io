@@ -445,6 +445,70 @@ let categorias = ['',
                 urlImagen: "https://img1.wsimg.com/isteam/ip/7c209d9e-b3f5-4165-a57a-3f0978c4a471/pa%C3%B1ales.png/:/rs=w:1440,h:1440",
                 tabla: undefined,
                 categoria: "11"
+            },
+            {
+                id: "56",
+                descripcionCorta: "Bata médico manga larga resortada",
+                descripcionLarga: "<ul><li>Tela no tejida de polipropileno 20g ± 2g</li><li>Manga larga con puño en resorte y cierre con velcro</li><li>Certificado INVIMA No. 2014022201 NO REQUIERE REGISTRO SANITARIO</li><li>Bolsa x10 unidades</li><li>Corrugada x 20 Bolsas</li><li>Desechable</li><li>No estéril</li></ul>",
+                urlImagen: "https://img1.wsimg.com/isteam/ip/7c209d9e-b3f5-4165-a57a-3f0978c4a471/1-prodimg.jpeg/:/rs=w:1440,h:1440",
+                tabla: undefined,
+                categoria: "1"
+            },
+            {
+                id: "57",
+                descripcionCorta: "Tapabocas",
+                descripcionLarga: "<ul><li>Tela no tejida</li><li>Producto desechable</li><li>Soporte nasal suave</li><li>Protege de la contaminación</li><li>La tela no tejida permite una buena circulación de aire, lo que mejora la comodidad y facilidad para respirar</li></ul>",
+                urlImagen: "https://img1.wsimg.com/isteam/ip/7c209d9e-b3f5-4165-a57a-3f0978c4a471/2-prodimg.jpeg/:/rs=w:1440,h:1440",
+                tabla: undefined,
+                categoria: "6"
+            },
+            {
+                id: "58",
+                descripcionCorta: "Gorro Oruga Blanco",
+                descripcionLarga: "<ul><li>Tela no tejida 11g ± 2g</li><li>Producto desechable</li><li>Sistema de pliegue tipo oruga</li><li>Protege de la contaminación</li><li>Ideal para uso industrial, fabricación de alimentos, medicamentos y laboratorios</li></ul>",
+                urlImagen: "https://img1.wsimg.com/isteam/ip/7c209d9e-b3f5-4165-a57a-3f0978c4a471/3-prodimg.jpeg/:/rs=w:1440,h:1440",
+                tabla: undefined,
+                categoria: "4"
+            },
+            {
+                id: "59",
+                descripcionCorta: "Polainas Antislip",
+                descripcionLarga: "<ul><li>Tela no tejida de 27g - 30g</li><li>Con antideslizantes, resorte ajustable y cosura invertida para mayor comodidad y seguridad</li><li>Certificado INVIMA No. 2014022201 NO REQUIERE REGISTRO SANITARIO</li><li>10 bolsas en cada corrugada: 1000 polainas por corrugada</li><li>Bolsa x 100 polainas</li></ul>",
+                urlImagen: "https://img1.wsimg.com/isteam/ip/7c209d9e-b3f5-4165-a57a-3f0978c4a471/4-prodimg.jpeg/:/rs=w:1440,h:1440",
+                tabla: undefined,
+                categoria: "5"
+            },
+            {
+                id: "60",
+                descripcionCorta: "Falda Citología",
+                descripcionLarga: "<ul><li>Tela no tejida azul SMS 30g ± 2g</li><li>Producto desechable, no estéril</li><li>Resortada, con amarre fácil en cintura</li><li>No requiere regstro sanitario</li><li>15 bolsas en cada corrugada</li><li>Bolsa x 10 unidades</li><li>Para uso médico</li></ul>",
+                urlImagen: "https://img1.wsimg.com/isteam/ip/7c209d9e-b3f5-4165-a57a-3f0978c4a471/5-prodimg.jpeg/:/rs=w:1440,h:1440",
+                tabla: undefined,
+                categoria: "9"
+            },
+            {
+                id: "61",
+                descripcionCorta: "Bata Médico con Puño Rib",
+                descripcionLarga: "<ul><li>Tela no tejida 30g ± 2g SMS (spunbond, meltblown, spunbond)</li><li>Producto desechable, no estéril</li><li>Manga larga con puño en algodón y sujeción en la cintura y cuello</li><li>Aislante de líquidos, de alta transpirabilidad</li><li>Certificado INVIMA No. 2014022201 NO REQUIERE REGISTRO SANITARIO</li><li>60 bolsas en cada corrugada: 60 batas por corrugada</li><li>Bolsa x 1 Bata</li></ul>",
+                urlImagen: "https://img1.wsimg.com/isteam/ip/7c209d9e-b3f5-4165-a57a-3f0978c4a471/6-prodimg.jpeg/:/rs=w:1440,h:1440",
+                tabla: undefined,
+                categoria: "1"
+            },
+            {
+                id: "62",
+                descripcionCorta: "Rollo Multiusos",
+                descripcionLarga: "<ul><li>Tela no tejida SS 27gr</li><li>Producto desechable, no estéril</li><li>Para uso médico, industrial, estética y laboratorio</li><li>Bolsa x 1 rollo</li></ul>",
+                urlImagen: "https://img1.wsimg.com/isteam/ip/7c209d9e-b3f5-4165-a57a-3f0978c4a471/7-prodimg.jpeg/:/rs=w:1440,h:1440",
+                tabla: undefined,
+                categoria: "1"
+            },
+            {
+                id: "63",
+                descripcionCorta: "Sábana Resortada con Tiras",
+                descripcionLarga: "<ul><li>Tela no tejida 30 ± 2gr SMS (spunbond, meltblown, spunbond)</li><li>Con elástico en las esquinas y tiras para mejor ajuste</li><li>Certificado INVIMA No. 2014022201 NO REQUIERE REGISTRO SANITARIO</li><li>Bolsa x 10 sábanas</li><li>12 bolsas en cada corrugada: 120 sábanas por corrugada</li></ul>",
+                urlImagen: "https://img1.wsimg.com/isteam/ip/7c209d9e-b3f5-4165-a57a-3f0978c4a471/8-prodimg.jpeg/:/rs=w:1440,h:1440",
+                tabla: undefined,
+                categoria: "11"
             }
         ];
         let row = document.getElementById('rowProductos');
@@ -464,7 +528,7 @@ let categorias = ['',
             {
                 row.innerHTML += `<div class="col-12 col-md-6 p-1">
                         <div class="card">
-                            <img src="${producto.urlImagen}" class="card-img-top pt-1" style="height: 15em">
+                            <img src="${producto.urlImagen}" class="card-img-top pt-1" >
                             <div class="card-body">
                                 <h5 class="card-title">${producto.descripcionCorta}</h5>
                                 <p class="card-text">${categorias[producto.categoria]}</p>
