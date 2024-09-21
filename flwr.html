@@ -1,1 +1,37 @@
-Holo
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flor Amarilla Animada</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        canvas {
+            background-color: white;
+            border: 2px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="500" height="500"></canvas>
+
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+
+        let progress = 0;
+        const totalFrames = 100; // Número de pasos para completar la animación
+        const centerX = canvas.width / 2;
+        const centerY = canvas.height / 2;
+
+        function drawPetal(angle, size) {
+            ctx.beginPath();
+            ctx.ellipse(centerX + Math.cos(angle) * 80, centerY + Math.sin(angle) * 80, 30, size, angle, 0, 2 * Math.PI);
+            ctx.fillStyle = '#FFD700'; // Color 
