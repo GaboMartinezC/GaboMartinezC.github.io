@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>tqm ta</title>
+    <title>Tulipán Amarillo Detallado</title>
     <style>
         body {
             display: flex;
@@ -11,7 +11,7 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: #d0e7f5; /* Fondo azul suave para armonizar */
+            background-color: #d0e7f5; /* Fondo azul suave */
         }
         canvas {
             background-color: white;
@@ -40,8 +40,8 @@
         function drawFlower(step) {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             const centerX = canvas.width / 2;
-            const centerY = canvas.height / 2 + canvas.height / 6;  // Ajustar la posición hacia abajo
-            const petalRadius = Math.min(canvas.width, canvas.height) / 8;  // Tamaño proporcional
+            const centerY = canvas.height / 2 + canvas.height / 8;  // Ajustar la posición hacia abajo
+            const petalRadius = Math.min(canvas.width, canvas.height) / 5;  // Flor más grande
             const stemHeight = canvas.height / 3;
 
             // Dibujar el tallo
@@ -58,33 +58,33 @@
 
             // Dibujar el centro de la flor al final
             if (step >= 5) {
-                drawFlowerCenter(centerX, centerY - stemHeight, petalRadius / 2);
+                drawFlowerCenter(centerX, centerY - stemHeight, petalRadius / 3);  // Centro más pequeño
             }
 
             // Incrementar el paso para la animación
             if (step < 6) {
-                setTimeout(() => requestAnimationFrame(() => drawFlower(step + 1)), 500);  // Animación más lenta
+                setTimeout(() => requestAnimationFrame(() => drawFlower(step + 1)), 500);  // Animación lenta
             }
         }
 
-        // Función para dibujar un pétalo estilo tulipán
+        // Función para dibujar un pétalo estilo tulipán con más detalle
         function drawTulipPetal(x, y, radius, position) {
             ctx.beginPath();
             if (position === 1) {
                 ctx.moveTo(x, y); // Pétalo izquierdo
-                ctx.bezierCurveTo(x - radius, y - radius, x - radius, y + radius / 2, x, y + radius);
+                ctx.bezierCurveTo(x - radius * 1.2, y - radius * 1.2, x - radius * 0.8, y + radius / 2, x, y + radius);
             } else if (position === 2) {
                 ctx.moveTo(x, y); // Pétalo central
-                ctx.bezierCurveTo(x - radius / 2, y - radius * 1.5, x + radius / 2, y - radius * 1.5, x, y + radius);
+                ctx.bezierCurveTo(x - radius * 0.5, y - radius * 1.8, x + radius * 0.5, y - radius * 1.8, x, y + radius);
             } else {
                 ctx.moveTo(x, y); // Pétalo derecho
-                ctx.bezierCurveTo(x + radius, y - radius, x + radius, y + radius / 2, x, y + radius);
+                ctx.bezierCurveTo(x + radius * 1.2, y - radius * 1.2, x + radius * 0.8, y + radius / 2, x, y + radius);
             }
             ctx.fillStyle = 'yellow';
             ctx.fill();
         }
 
-        // Función para dibujar el centro de la flor
+        // Función para dibujar el centro de la flor (más pequeño)
         function drawFlowerCenter(x, y, radius) {
             ctx.beginPath();
             ctx.arc(x, y, radius, 0, Math.PI * 2, false);
@@ -92,7 +92,7 @@
             ctx.fill();
         }
 
-        // Función para dibujar el tallo
+        // Función para dibujar el tallo (pegado a la flor)
         function drawStem(x, y, height) {
             ctx.beginPath();
             ctx.moveTo(x, y);
