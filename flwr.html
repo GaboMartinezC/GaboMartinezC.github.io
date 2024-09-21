@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tulipán Amarillo Detallado</title>
+    <title>tqm</title>
     <style>
         body {
             display: flex;
@@ -40,30 +40,30 @@
         function drawFlower(step) {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             const centerX = canvas.width / 2;
-            const centerY = canvas.height / 2 + canvas.height / 8;  // Ajustar la posición hacia abajo
+            const centerY = canvas.height / 2;
             const petalRadius = Math.min(canvas.width, canvas.height) / 5;  // Flor más grande
             const stemHeight = canvas.height / 3;
 
-            // Dibujar el tallo
-            if (step >= 1) {
-                drawStem(centerX, centerY, stemHeight);
-            }
-
             // Dibujar los pétalos uno por uno
             for (let i = 1; i <= 3; i++) {
-                if (step >= i + 1) {
-                    drawTulipPetal(centerX, centerY - stemHeight, petalRadius, i);
+                if (step >= i) {
+                    drawTulipPetal(centerX, centerY - stemHeight / 2, petalRadius, i);
                 }
             }
 
             // Dibujar el centro de la flor al final
+            if (step >= 4) {
+                drawFlowerCenter(centerX, centerY - stemHeight / 2, petalRadius / 3);  // Centro más pequeño
+            }
+
+            // Dibujar el tallo cuando la flor esté completa
             if (step >= 5) {
-                drawFlowerCenter(centerX, centerY - stemHeight, petalRadius / 3);  // Centro más pequeño
+                drawStem(centerX, centerY - stemHeight / 2 + petalRadius, stemHeight);
             }
 
             // Incrementar el paso para la animación
             if (step < 6) {
-                setTimeout(() => requestAnimationFrame(() => drawFlower(step + 1)), 500);  // Animación lenta
+                setTimeout(() => requestAnimationFrame(() => drawFlower(step + 1)), 500);  // Animación más lenta
             }
         }
 
@@ -92,7 +92,7 @@
             ctx.fill();
         }
 
-        // Función para dibujar el tallo (pegado a la flor)
+        // Función para dibujar el tallo (justo debajo de la flor)
         function drawStem(x, y, height) {
             ctx.beginPath();
             ctx.moveTo(x, y);
