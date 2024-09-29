@@ -12,15 +12,5 @@ const Responsive = () => {
         for(let i = 0; i < panelesBTN.length; i++)
             panelesBTN[i].style.display = 'block';
     }
-    //Resolucion pantalla grande
-    else 
-    {
-        //Agrega las imágenes
-        for(let i = 0; i < elementosImg.length; i++)
-            elementosImg[i].style.display = 'block';
-        //Acomoda verticalmente los botones
-        for(let i = 0; i < panelesBTN.length; i++)
-            panelesBTN[i].style.display = 'flex';
-    }
 }
 Responsive();
