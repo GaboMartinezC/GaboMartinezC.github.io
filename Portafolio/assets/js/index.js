@@ -1,8 +1,9 @@
-const Responsive = (html) => {
+const Responsive = () => {
     let elementosImg = document.getElementsByClassName('imagen');
     let panelesBTN = document.getElementsByClassName('panelBtns');
-    //Modificaciones en resolucion pantalla pequeña
-    if (html.matches) 
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    //Movil/Resolucion pequeña
+    if ((/android|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent)))
     {
         //Remueve las imágenes
         for(let i = 0; i < elementosImg.length; i++)
@@ -21,9 +22,5 @@ const Responsive = (html) => {
         for(let i = 0; i < panelesBTN.length; i++)
             panelesBTN[i].style.display = 'flex';
     }
-  }
-  var html = window.matchMedia("(max-width: 700px)")
-  Responsive(html);
-  html.addEventListener("change", function() {
-    Responsive(html);
-  }); 
+}
+Responsive();
