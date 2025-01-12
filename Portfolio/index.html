@@ -7,42 +7,14 @@
     <title>Gabriel Martínez Camareno</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <style>
-        body {
-            background-image: url('assets/img/fondo.jpg');
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            position: relative;
-        }
-
-        body::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: inherit;
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            filter: blur(10px);
-            z-index: -1;
-        }
-
-        .nav-item :hover {
-            color: #fafafa !important;
-            border: 1px #fafafa !important;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/estilos.css">
 </head>
-
+<script>
+    function CambiarContenido(contenido) {
+        $('.contenido').hide();
+        $('#'+contenido).show();
+    }
+</script>
 <body>
     <div class="container pt-2">
         <nav class="navbar navbar-expand-lg bg-transparent rounded">
@@ -55,35 +27,88 @@
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
                     <div class="navbar-text">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item rounded">
-                                <a class="nav-link" type="button" data-bs-toggle="modal" data-bs-target="#modalCertificaciones">Skills & Certifications</a>
+                            <li class="nav-item text-center">
+                                <a class="nav-link" type="button" onclick="CambiarContenido('inicio')">
+                                    <span class="egText">Welcome</span>
+                                    <span class="esText">Bienvenida</span>
+                                </a>
                             </li>
-                            <li class="nav-item rounded">
-                                <a class="nav-link" type="button" data-bs-toggle="modal" data-bs-target="#modalGrados">Degrees</a>
+                            <li class="nav-item text-center">
+                                <a class="nav-link" type="button" onclick="CambiarContenido('formacion')">
+                                    <span class="egText">Formation & Experience</span>
+                                    <span class="esText">Formación y Experiencia</span>
+                                </a>
                             </li>
-                            <li class="nav-item rounded">
-                                <a class="nav-link"  type="button" data-bs-toggle="modal" data-bs-target="#modalProyectos">Portfolio Projects</a>
+                            <li class="nav-item text-center">
+                                <a class="nav-link" type="button" onclick="CambiarContenido('portafolio');">
+                                    <span class="egText">Portfolio Projects</span>
+                                    <span class="esText">Portafolio</span>
+                                </a>
                             </li>
-                            <li class="nav-item dropdown rounded">
+                            <li class="nav-item dropdown text-center">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                     aria-expanded="false">
-                                    Languages
+                                    <span class="egText">Languages</span>
+                                    <span class="esText">Idiomas</span>
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">English</a></li>
-                                    <li><a class="dropdown-item" href="#">Spanish</a></li>
+                                    <li><a class="dropdown-item" href="#" id="eglTraduc">
+                                            <span class="egText">English</span>
+                                            <span class="esText">Inglés</span>
+                                        </a></li>
+                                    <li><a class="dropdown-item" href="#" id="esTraduc">
+                                            <span class="egText">Spanish</span>
+                                            <span class="esText">Español</span>
+                                        </a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item dropdown rounded">
+                            <li class="nav-item dropdown rounded text-center">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                     aria-expanded="false">
-                                    Contact Information
+                                    <span class="egText">Contact Information</span>
+                                    <span class="esText">Información de Contacto</span>
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Email</a></li>
-                                    <li><a class="dropdown-item" href="#">LinkedIn</a></li>
-                                    <li><a class="dropdown-item" href="#">WhatsApp</a></li>
-                                    <li><a class="dropdown-item" href="#">Github</a></li>
+                                    <li>
+                                        <a class="dropdown-item" href="mailto:martinezcgabriel24@gmail.com"
+                                            target="_blank">
+                                            <div class="d-flex justify-content-between">
+                                                <span>Email</span>
+                                                <svg class="img-responsive" xmlns="http://www.w3.org/2000/svg"
+                                                    width="15"
+                                                    viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                                    <path fill="#000000"
+                                                        d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" />
+                                                </svg>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="https://www.linkedin.com/in/gabriel-camareno/"
+                                            target="_blank">
+                                            <div class="d-flex justify-content-between">
+                                                <span>LinkedIn</span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="15"
+                                                    viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                                    <path fill="#000000"
+                                                        d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+                                                </svg>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item"
+                                            href="https://github.com/GaboMartinezC?tab=repositories" target="_blank">
+                                            <div class="d-flex justify-content-between">
+                                                <span>Github</span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="15"
+                                                    viewBox="0 0 496 512"><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                                    <path fill="#000000"
+                                                        d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+                                                </svg>
+                                            </div>
+                                        </a>
+                                    </li>
                                 </ul>
                             </li>
                         </ul>
@@ -91,69 +116,256 @@
                 </div>
             </div>
         </nav>
-        <div class="container-fluid">
+        <div class="container-fluid contenido" id="inicio">
             <div class="p-5 text-center bg-body-transparent rounded">
-                <svg class="bi mt-4 mb-3" style="color: var(--bs-indigo);" width="100" height="100">
-                    <use xlink:href="#bootstrap"></use>
-                </svg>
-                <h1 class="text-body-emphasis">Welcome!</h1>
-                <p class="col-lg-8 mx-auto fs-5">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis perferendis inventore architecto,
-                    voluptatem atque veritatis dicta suscipit consectetur, impedit obcaecati, iste possimus deserunt
-                    eius iure laborum dolore ex blanditiis hic!
+                <div class="my-5">
+                    <img src="assets/img/foto.png" alt="" class="img-fluid rounded" style="height: 20vh;">
+                </div>
+                <h1 class="text-body-emphasis">
+                    <span class="egText">Welcome!</span>
+                    <span class="esText">¡Bienvenid@!</span>
+                </h1>
+                <p class="col-lg-8 mx-auto fs-5 egText">
+                    Junior Web Developer passionate about technology, with a solid foundation in front-end development,
+                    general programming, object-oriented programming (OOP), and back-end technologies. Driven by
+                    continuous learning and skill improvement, aiming to create innovative, creative, and challenging
+                    solutions.
+                </p>
+                <p class="col-lg-8 mx-auto fs-5 esText">
+                    Desarrollador Web Junior apasionado por la tecnología, con sólidas bases en el desarrollo front-end,
+                    programación general, orientación a objetos (POO) y tecnologías back-end. Motivado por el
+                    aprendizaje
+                    continuo y mejora de mis Habilidades, buscando crear soluciones innovadoras, creativas y retadoras.
                 </p>
                 <div class="d-inline-flex gap-2 mb-5">
-                    <button class="btn btn-outline-dark">
-                        <span>Download CV</span>
-                    </button>
+                    <a href="assets/fls/GabrielMartínezCamareno_119690990_CV_Eng.pdf" download="" class="btn btn-light egText">
+                        <span class="egText">Download CV</span>
+                    </a>
+                    <a href="assets/fls/GabrielMartínezCamareno_119690990_CV_Esp.pdf" download="" class="btn btn-light esText">
+                        <span class="esText">Descargar CV</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid contenido" id="formacion">
+            <div class="row pt-md-5">
+                <div class="col-md-6 col-12">
+                    <div class="card bg-white p-3 my-1">
+                        <h6 class="egText"><strong>Formation</strong></h6>
+                        <h6 class="esText"><strong>Formación</strong></h6>
+                        <hr>
+                        <div class="egText">
+                            <ul>
+                                <li>
+                                    <strong>Middle Technician in Web Development</strong> <br>
+                                    <span>Colegio Vocacional de Artes y Oficios 2022-2024</span>
+                                </li>
+                                <li>
+                                    <strong>English Course B2+ Level</strong><br>
+                                    <span>Idioma Internacional 2023-2024</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="esText">
+                            <ul>
+                                <li>
+                                    <strong>Técnico Medio en Desarrollo Web</strong> <br>
+                                    <span>Colegio Vocacional de Artes y Oficios 2022-2024</span>
+                                </li>
+                                <li>
+                                    <strong>English Course B2+ Level</strong><br>
+                                    <span>Idioma Internacional 2023-2024</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12">
+                    <div class="card bg-white p-3 my-1">
+                        <h6 class="egText"><strong>Experience</strong></h6>
+                        <h6 class="esText"><strong>Experiencia</strong></h6>
+                        <hr>
+                        <div class="egText">
+                            <ul>
+                                <li>
+                                    <strong>Internship at Fundatec (2024)</strong> <br>
+                                    <span>Two-month internship as a front-end developer in Fundación Tecnológica de Costa Rica, solving web design challenges and manipulating systems built with PHP and JavaScript</span>
+                                </li>
+                                <li>
+                                    <strong>Freelancing Experience (2023-2024)</strong><br>
+                                    <span>Several labors related to IT support, web page designing and coding for small bussinesses and acquaintances</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="esText">
+                            <ul>
+                                <li>
+                                    <strong>Práctica profesional FUNDATEC (2024)</strong> <br>
+                                    <span>Práctica de dos meses como programador front-end, donde resolví problemas de diseño web en varios sistemas escritos en PHP y JavaScript</span>
+                                </li>
+                                <li>
+                                    <strong>Experiencia Freelance (2023-2024)</strong><br>
+                                    <span>Una serie de labores relacionadas al soporte de TI, diseño y codificación de páginas web para pequeños negocios y conocidos</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 px-md-5">
+                    <div class="card bg-white p-3 my-1">
+                        <h6 class="egText"><strong>Skills</strong></h6>
+                        <h6 class="esText"><strong>Habilidades</strong></h6>
+                        <hr>
+                        <div class="egText">
+                            <ul>
+                                <li>OOP</li>
+                                <li>HTML5. CSS3. JavaScript & JQuery</li>
+                                <li>Bootstrap</li>
+                                <li>.NET Framework</li>
+                                <li>MVC</li>
+                                <li>PHP</li>
+                                <li>MySQL. SQL Server</li>
+                                <li>UML</li>
+                                <li>GIT</li>
+                            </ul>
+                        </div>
+                        <div class="esText">
+                            <ul>
+                                <li>POO</li>
+                                <li>HTML5. CSS3. JavaScript & JQuery</li>
+                                <li>Bootstrap</li>
+                                <li>.NET Framework</li>
+                                <li>MVC</li>
+                                <li>PHP</li>
+                                <li>MySQL. SQL Server</li>
+                                <li>UML</li>
+                                <li>GIT</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid contenido mt-5" id="portafolio">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="card bg-white p-3 my-1">
+                        <h6 class="egText">Concert Inscription</h6>
+                        <h6 class="esText">Inscripción Concierto</h6>
+                        <hr>
+                        <p class="egText">
+                            Simple inscription system built in PHP, JavaScript, MVC architecture and MySQL Database made for
+                            a benefic concert of several afficionate bands in my hometown.
+                        </p>
+                        <p class="esText">
+                            Sistema de Inscripción básico  escrito en PHP, JavaScript, arquitectura MVC y MySQL para base de datos,
+                            hecho para un concierto de varias bandas aficionadas en mi ciudad. 
+                        </p>
+                        <div class="row text-center">
+                            <span>
+                                <svg width="75" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M320 104.5c171.4 0 303.2 72.2 303.2 151.5S491.3 407.5 320 407.5c-171.4 0-303.2-72.2-303.2-151.5S148.7 104.5 320 104.5m0-16.8C143.3 87.7 0 163 0 256s143.3 168.3 320 168.3S640 349 640 256 496.7 87.7 320 87.7zM218.2 242.5c-7.9 40.5-35.8 36.3-70.1 36.3l13.7-70.6c38 0 63.8-4.1 56.4 34.3zM97.4 350.3h36.7l8.7-44.8c41.1 0 66.6 3 90.2-19.1 26.1-24 32.9-66.7 14.3-88.1-9.7-11.2-25.3-16.7-46.5-16.7h-70.7L97.4 350.3zm185.7-213.6h36.5l-8.7 44.8c31.5 0 60.7-2.3 74.8 10.7 14.8 13.6 7.7 31-8.3 113.1h-37c15.4-79.4 18.3-86 12.7-92-5.4-5.8-17.7-4.6-47.4-4.6l-18.8 96.6h-36.5l32.7-168.6zM505 242.5c-8 41.1-36.7 36.3-70.1 36.3l13.7-70.6c38.2 0 63.8-4.1 56.4 34.3zM384.2 350.3H421l8.7-44.8c43.2 0 67.1 2.5 90.2-19.1 26.1-24 32.9-66.7 14.3-88.1-9.7-11.2-25.3-16.7-46.5-16.7H417l-32.8 168.7z"/></svg>
+                            </span>
+                        </div>
+                        <div class="mt-1">
+                            <a href="https://github.com/GaboMartinezC/Concierto28Dic" target="_blank" class="btn btn-outline-dark">
+                                <span class="egText">Source Code</span>
+                                <span class="esText">Código Fuente</span>
+                            </a>
+                            <a href="http://18.223.238.247/Inscripcion/" target="_blank" class="btn btn-outline-dark">
+                                <span class="egText">Run System</span>
+                                <span class="esText">Correr Sistema</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="card bg-white p-3 my-1">
+                        <h6 class="egText">Habit Tracking App</h6>
+                        <h6 class="esText">App de monitoreo de hábitos</h6>
+                        <hr>
+                        <p class="egText">
+                            Web App built with Java Springboot which tracks personal habits at a scallable level. Personal 
+                            project in order to reinforce Springboot framework usage.
+                        </p>
+                        <p class="esText">
+                            Aplicación Web escrita con Java Springboot que monitorea hábitos personales de forma escalable. 
+                            Proyecto personal generado para reforzar mi uso del framework Springboot.
+                        </p>
+                        <div class="row text-center">
+                            <span>
+                                <svg width="50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M277.7 312.9c9.8-6.7 23.4-12.5 23.4-12.5s-38.7 7-77.2 10.2c-47.1 3.9-97.7 4.7-123.1 1.3-60.1-8 33-30.1 33-30.1s-36.1-2.4-80.6 19c-52.5 25.4 130 37 224.5 12.1zm-85.4-32.1c-19-42.7-83.1-80.2 0-145.8C296 53.2 242.8 0 242.8 0c21.5 84.5-75.6 110.1-110.7 162.6-23.9 35.9 11.7 74.4 60.2 118.2zm114.6-176.2c.1 0-175.2 43.8-91.5 140.2 24.7 28.4-6.5 54-6.5 54s62.7-32.4 33.9-72.9c-26.9-37.8-47.5-56.6 64.1-121.3zm-6.1 270.5a12.2 12.2 0 0 1 -2 2.6c128.3-33.7 81.1-118.9 19.8-97.3a17.3 17.3 0 0 0 -8.2 6.3 70.5 70.5 0 0 1 11-3c31-6.5 75.5 41.5-20.6 91.4zM348 437.4s14.5 11.9-15.9 21.2c-57.9 17.5-240.8 22.8-291.6 .7-18.3-7.9 16-19 26.8-21.3 11.2-2.4 17.7-2 17.7-2-20.3-14.3-131.3 28.1-56.4 40.2C232.8 509.4 401 461.3 348 437.4zM124.4 396c-78.7 22 47.9 67.4 148.1 24.5a185.9 185.9 0 0 1 -28.2-13.8c-44.7 8.5-65.4 9.1-106 4.5-33.5-3.8-13.9-15.2-13.9-15.2zm179.8 97.2c-78.7 14.8-175.8 13.1-233.3 3.6 0-.1 11.8 9.7 72.4 13.6 92.2 5.9 233.8-3.3 237.1-46.9 0 0-6.4 16.5-76.2 29.7zM260.6 353c-59.2 11.4-93.5 11.1-136.8 6.6-33.5-3.5-11.6-19.7-11.6-19.7-86.8 28.8 48.2 61.4 169.5 25.9a60.4 60.4 0 0 1 -21.1-12.8z"/></svg>
+                            </span>
+                        </div>
+                        <div class="mt-1">
+                            <a href="https://github.com/GaboMartinezC/HabitTracking" target="_blank" class="btn btn-outline-dark">
+                                <span class="egText">Source Code</span>
+                                <span class="esText">Código Fuente</span>
+                            </a>
+                            <a href="https://gabomartinezc.github.io/HabitTracking/" target="_blank" class="btn btn-outline-dark">
+                                <span class="egText">Run System</span>
+                                <span class="esText">Correr Sistema</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="card bg-white p-3 my-1">
+                        <h6 class="egText">Kanban Board</h6>
+                        <h6 class="esText">Tablero Kanban</h6>
+                        <hr>
+                        <p class="egText">
+                            Simple kanban board made in order to reinforce knowledge about API's with PHP and JQuery. Useful and simple tool for students.
+                        </p>
+                        <p class="esText">
+                            Tablero Kanban simple hecho en función de reforzar mis conocimientos sobre API's con PHP y JQuery. Herramienta útil y sencilla para estudiantes.
+                        </p>
+                        <div class="row text-center">
+                            <span>
+                                <svg width="50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M0 32v448h448V32H0zm243.8 349.4c0 43.6-25.6 63.5-62.9 63.5-33.7 0-53.2-17.4-63.2-38.5l34.3-20.7c6.6 11.7 12.6 21.6 27.1 21.6 13.8 0 22.6-5.4 22.6-26.5V237.7h42.1v143.7zm99.6 63.5c-39.1 0-64.4-18.6-76.7-43l34.3-19.8c9 14.7 20.8 25.6 41.5 25.6 17.4 0 28.6-8.7 28.6-20.8 0-14.4-11.4-19.5-30.7-28l-10.5-4.5c-30.4-12.9-50.5-29.2-50.5-63.5 0-31.6 24.1-55.6 61.6-55.6 26.8 0 46 9.3 59.8 33.7L368 290c-7.2-12.9-15-18-27.1-18-12.3 0-20.1 7.8-20.1 18 0 12.6 7.8 17.7 25.9 25.6l10.5 4.5c35.8 15.3 55.9 31 55.9 66.2 0 37.8-29.8 58.6-69.7 58.6z"/></svg>
+                            </span>
+                        </div>
+                        <div class="mt-1">
+                            <a href="https://github.com/GaboMartinezC/EvoKanban" target="_blank"  class="btn btn-outline-dark">
+                                <span class="egText">Source Code</span>
+                                <span class="esText">Código Fuente</span>
+                            </a>
+                            <a href="http://18.223.238.247/Kanban/view/" target="_blank" class="btn btn-outline-dark">
+                                <span class="egText">Run System</span>
+                                <span class="esText">Correr Sistema</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="card bg-white p-3 my-1">
+                        <h6 class="egText">ELEA Jewelry Web Catalog</h6>
+                        <h6 class="esText">Catálogo Web Joyería ELEA</h6>
+                        <hr>
+                        <p class="egText">
+                            Informative web catalog for a family bussiness. Consists of web design and web page.
+                        </p>
+                        <p class="esText">
+                            Catalogo web informativo para un negocio familiar. Consiste del diseño de la web y su desarrollo.
+                        </p>
+                        <div class="row text-center">
+                            <span>
+                                <svg width="60" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z"/></svg>
+                            </span>
+                        </div>
+                        <div class="mt-1">
+                            <a target="_blank" href="https://www.figma.com/design/J0oDX4i9cwAoCg0xHarLVA/ELEA-Joyer%C3%ADa?node-id=0-1&p=f&t=6SZ2ClpPRnuaQtY8-0" class="btn btn-outline-dark">
+                                <span>UX/UI</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </body>
-<!--Modales-->
-<!-- Certificaciones -->
-<div class="modal fade" id="modalCertificaciones" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header text-center">
-                <h1 class="modal-title fs-5">Modal title</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                ...
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Grados -->
-<div class="modal fade" id="modalGrados" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header text-center">
-                <h1 class="modal-title fs-5">Modal title</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                ...
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Proyectos -->
-<div class="modal fade" id="modalProyectos" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header text-center">
-                <h1 class="modal-title fs-5">Modal title</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                ...
-            </div>
-        </div>
-    </div>
-</div>
+
 
 </html>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
