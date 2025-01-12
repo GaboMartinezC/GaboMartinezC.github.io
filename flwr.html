@@ -11,7 +11,7 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: #d0e7f5; /* Fondo azul suave */
+            background-color: #d0e7f5;
         }
         canvas {
             background-color: #d0e7f5;
@@ -25,11 +25,10 @@
         const canvas = document.getElementById('canvas');
         const ctx = canvas.getContext('2d');
 
-        // Ajustar el canvas a la pantalla del dispositivo
         function resizeCanvas() {
-            canvas.width = window.innerWidth * 0.9;  // 90% del ancho de la ventana
-            canvas.height = window.innerHeight * 0.9; // 90% del alto de la ventana
-            drawFlower(0);  // Redibujar la flor después de redimensionar
+            canvas.width = window.innerWidth * 0.9;
+            canvas.height = window.innerHeight * 0.9;
+            drawFlower(0);
         }
 
         window.addEventListener('resize', resizeCanvas);
